@@ -1,0 +1,36 @@
+﻿<Window x:Class="CSH2_Tag_18_Wunschzettel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSH2_Tag_18_Wunschzettel"
+        mc:Ignorable="d"
+        Title="Wunschzettel" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="Wunschzettel" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold" FontSize="30"/>
+        <Button x:Name="btnAbsenden" Grid.Row="2" Grid.ColumnSpan="2" Content="Absenden" HorizontalAlignment="Center" VerticalAlignment="Center" Height="52" Width="559" Click="btnAbsenden_Click"/>
+        <GroupBox x:Name="grbGender" Header="Geschlecht" Grid.Row="1" Margin="20" Padding="20" BorderThickness="3">
+            <StackPanel>
+                <RadioButton x:Name="rdbMale" Content="Männlich" Margin="5"/>
+                <RadioButton x:Name="rdbFemale" Content="Weiblich" Margin="5"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox x:Name="grbWishes" Header="Wünsche" Grid.Row="1" Grid.Column="1" Margin="20" Padding="20" BorderThickness="3">
+            <StackPanel>
+                <CheckBox Content="Computer" Margin="5"/>
+                <CheckBox Content="Parfum" Margin="5"/>
+                <CheckBox Content="Weltherrschaft" Margin="5"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
